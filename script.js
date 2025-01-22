@@ -11,7 +11,7 @@ function nextContent() {
     "Твоя доброта і чуйність роблять тебе особливою і незабутньою",
     "Твоя природна грація і краса просто захоплюють дух",
     "В тобі є щось таке магнетичне, що я не можу перестати думати про тебе",
-    "підкажи будь-ласка, як тобі, сподобалось?"
+    "Як тобі, сподобалось?"
   ];
 
   step++;
@@ -36,14 +36,31 @@ function nextContent() {
 
 function askAnotherQuestion() {
   const content = document.getElementById("content");
-  content.innerHTML = "Дозволь тебе завтра запросити на вечерю до себе, та разом провести час! Буде: Скумбрія, Картопелька, та цікавий фільм :)";
-
   const buttonContainer = document.querySelector(".next-button-container");
+  
+  // Обновляем контент с новым вопросом
+  content.innerHTML = "Дозволь тебе завтра запросити на вечерю до себе, та разом провести час! Буде: Скумбрія, Картопелька, та цікавий фільм :)";
   buttonContainer.innerHTML = ""; // Убираем кнопку "Так"
 
-  setTimeout(() => {
-    // Убрать все кнопки и контент через некоторое время
-    content.innerHTML = "Дякую за увагу! Відповідь надай в Telegram";
-    buttonContainer.style.display = "none";
-  }, 15000); // Убираем через 15 секунд
+  // Создаем элемент для таймера
+  const timerElement = document.createElement("div");
+  timerElement.className = "timer";
+  timerElement.style.fontSize = "12px"; // Стили таймера
+  timerElement.style.marginTop = "10px";
+  timerElement.style.color = "#ffffff";
+  buttonContainer.appendChild(timerElement);
+
+  let timeLeft = 15; // Время до смены текста (в секундах)
+
+  // Функция для обновления таймера каждую секунду
+  const countdown = setInterval(() => {
+    if (timeLeft > 0) {
+      timerElement.textContent = `Через: ${timeLeft--} секунд, повідомлення буде закрито та вказано куди надати відповідь!`; // Обновляем текст
+    } else {
+      clearInterval(countdown); // Останавливаем таймер
+      content.innerHTML = "Дякую за увагу! Відповідь надай в Telegram";
+      buttonContainer.innerHTML = ""; // Убираем таймер
+      buttonContainer.style.display = "none"; // Скрываем контейнер
+    }
+  }, 1000); // Интервал в 1 секунду
 }

@@ -147,7 +147,7 @@ body {
   
     .character {
       height: 100px; /* Уменьшенное изображение персонажа */
-      margin-left: -25px; /* Зсув вліво */
+      margin-left: -20px; /* Зсув вліво */
     }
   }
 

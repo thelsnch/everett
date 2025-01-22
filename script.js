@@ -80,7 +80,7 @@ function startCountdown() {
   // Функция для обновления таймера каждую секунду
   const countdown = setInterval(() => {
     if (timeLeft > 0) {
-      timerElement.textContent = `Через: ${timeLeft--} секунд, повідомлення буде закрито, та відкрито new banner`; // Обновляем текст
+      timerElement.textContent = `Через: ${timeLeft--} секунд, повідомлення буде закрито, та вказано куди надати відповідь`; // Обновляем текст
     } else {
       clearInterval(countdown); // Останавливаем таймер
       content.innerHTML = "Дякую за увагу, в майбутньому хочу реалізувати проєкт, в якому будуть додані всі проєкти клікабельно створені для тебе. Свого роду history for im and you.<br>Відповідь на питання надай в Telegram";

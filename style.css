@@ -105,11 +105,11 @@ body {
   @media (max-width: 480px) {
     .card {
       font-size: 11px; /* Уменьшаем текст для небольших экранов */
-      padding: 14px;
+      padding: 12px;
     }
   
     .info-block, .info-dev {
-      font-size: 12px;
+      font-size: 11px;
     }
   
     .next-button,
@@ -119,6 +119,6 @@ body {
     }
   
     .character {
-      height: 80px; /* Уменьшенное изображение персонажа */
+      height: 100px; /* Уменьшенное изображение персонажа */
     }
   }

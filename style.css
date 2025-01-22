@@ -120,5 +120,6 @@ body {
   
     .character {
       height: 60px; /* Уменьшенное изображение персонажа */
+      transform: translateX(-20px); /* Здвигаем на 20px влево */
     }
   }

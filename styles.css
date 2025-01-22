@@ -1,19 +1,23 @@
+/* Основные стили */
 body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
   background: linear-gradient(135deg, #0022ff, #0055ff);
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  overflow: hidden; /* Убираем прокрутку */
 }
 
 .container {
   text-align: center;
   color: white;
   position: relative;
+  width: 90%; /* Уменьшаем ширину для смартфонов */
+  max-width: 400px; /* Максимальная ширина для адаптации */
 }
 
 .characters {
@@ -21,97 +25,100 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
+  margin-top: 20px;
 }
 
 .card {
   background-color: #0044ff;
-  padding: 40px 60px;
-  border-radius: 20px;
-  font-size: 22px;
-  margin-left: 60px;
+  padding: 20px;
+  border-radius: 15px;
+  font-size: 18px;
   color: white;
   text-align: center;
   box-shadow: 0 5px 15px rgb(255, 255, 255, 0.4);
-  z-index: 2;
   position: relative;
+  line-height: 1.5; /* Для лучшей читаемости текста */
 }
+
 .character {
-  height: 170px;
-  width: auto;
-  z-index: 1;
+  height: 130px; /* Уменьшенная высота для смартфонов */
+  max-width: 100%; /* Оставляем пропорции для изображений */
 }
 
-.character-left {
-  margin-right: -40px; /* Подгоняем, чтобы выглядело натурально */
+.next-button-container {
+  margin-top: 20px;
 }
 
-.character-right {
-  margin-left: -35px;
-}
-
-.next-button {
+.next-button,
+.yes-button {
   margin-top: 15px;
-  padding: 15px 30px;
-  font-size: 18px;
-  margin-left: 5px;
+  padding: 10px 20px; /* Уменьшаем размеры кнопок */
+  font-size: 16px;
   background-color: #ff0062;
   color: white;
   border: none;
   border-radius: 20px;
   cursor: pointer;
-  box-shadow: 0 5px 15px rgb(255, 255, 255, 0.5);
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.5);
+  width: 100%; /* Кнопка растягивается на всю ширину */
 }
 
-.next-button:hover {
-  background-color: #ff0062;
+.next-button:hover,
+.yes-button:hover {
+  background-color: #ff3873;
 }
 
 .info-block {
-  position: fixed; /* Исправляем на фиксированное позиционирование */
-  top: 5%;         /* Точный отступ сверху */
+  position: fixed;
+  top: 5%;
   left: 50%;
-  right: 50%;
   transform: translateX(-50%);
-  width: 25%;      /* Оптимальная ширина для контента */
-  padding: 20px;
-  background-color: rgba(255, 255, 255, 0.3); /* Нежный фон */
-  border: 2px solid #fff;
+  width: 90%; /* На смартфонах блок занимает почти всю ширину */
+  max-width: 400px; /* Максимальная ширина блока */
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border: 1px solid #fff;
   border-radius: 10px;
-  text-align: center;
   color: white;
-  font-size: 20px;
+  font-size: 16px;
   box-shadow: 0 5px 15px rgba(255, 255, 255, 0.5);
-  z-index: 1000;   /* Устанавливаем приоритет отображения */
-}
-.info-dev {
-  position: fixed; /* Исправляем на фиксированное позиционирование */
-  top: 65%;         /* Точный отступ сверху */
-  left: 30%;
-  right: 30%;
-  transform: translateX(75%);
-  width: 15%;      /* Оптимальная ширина для контента */
-  padding: 10px;
-  background-color: rgba(68, 0, 255, 0.3); /* Нежный фон */
-  border: 2px solid #8c00ff;
-  border-radius: 10px;
-  text-align: center;
-  color: rgb(255, 255, 255);
-  font-size: 20px;
-  box-shadow: 0 5px 15px rgb(0, 81, 255);
-  z-index: 1000;   /* Устанавливаем приоритет отображения */
-}
-.yes-button {
-  margin-top: 15px;
-  padding: 15px 30px;
-  font-size: 18px;
-  background-color: #28a745;
-  color: white;
-  border: none;
-  border-radius: 20px;
-  cursor: pointer;
-  box-shadow: 0 5px 15px rgba(0, 255, 0, 0.5);
 }
 
-.yes-button:hover {
-  background-color: #218838;
+.info-dev {
+  position: fixed;
+  bottom: 5%; /* Переносим снизу экрана */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%; /* Ширина адаптирована под экраны смартфонов */
+  max-width: 400px; /* Максимальная ширина */
+  padding: 10px;
+  background-color: rgba(68, 0, 255, 0.3);
+  border: 1px solid #8c00ff;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+  font-size: 14px;
+  box-shadow: 0 5px 15px rgb(0, 81, 255);
+}
+
+/* Адаптация для экранов до 480px (iPhone SE и другие маленькие экраны) */
+@media (max-width: 480px) {
+  .card {
+    font-size: 16px; /* Уменьшаем текст для небольших экранов */
+    padding: 15px;
+  }
+
+  .info-block, .info-dev {
+    font-size: 14px;
+  }
+
+  .next-button,
+  .yes-button {
+    font-size: 14px;
+    padding: 8px 15px;
+  }
+
+  .character {
+    height: 100px; /* Уменьшенное изображение персонажа */
+  }
 }

@@ -46,7 +46,7 @@ function askAnotherQuestion() {
   const buttonContainer = document.querySelector(".next-button-container");
 
   // Обновляем контент с новым вопросом
-  content.innerHTML = "Дякую, мені дуже приємно робити так, щоб ти посміхалась.<br>Дозволь запросити тебе завтра до мене на вечерю, буде скумбрія, картопелька...";
+  content.innerHTML = "Дякую, мені дуже приємно робити так, щоб ти посміхалась.<br>Дозволь запросити тебе завтра до мене на вечерю, приготую скумбрію, картопельку...";
   buttonContainer.innerHTML = ""; // Убираем кнопки
 
   startCountdown(); // Запуск таймера
@@ -57,7 +57,7 @@ function showDisappointmentMessage() {
   const buttonContainer = document.querySelector(".next-button-container");
 
   // Отображаем сообщение о разочаровании
-  content.innerHTML = "Шкода, що не сподобалось. Буду працювати, щоб стати краще.<br>Дозволь запросити тебе завтра до мене на вечерю, буде скумбрія, картопелька...";
+  content.innerHTML = "Шкода, що не сподобалось. Буду працювати, щоб стати краще.<br>Дозволь запросити тебе завтра до мене на вечерю, приготую скумбрію, картопельку...";
   buttonContainer.innerHTML = ""; // Убираем кнопки
 
   startCountdown(); // Запуск таймера

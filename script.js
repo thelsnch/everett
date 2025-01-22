@@ -46,7 +46,7 @@ function askAnotherQuestion() {
   const buttonContainer = document.querySelector(".next-button-container");
 
   // Обновляем контент с новым вопросом
-  content.innerHTML = "Дякую, мені дуже приємно робити так, щоб ти посміхалась";
+  content.innerHTML = "Дякую, мені дуже приємно робити так, щоб ти посміхалась.<br>Дозволь запросити тебе завтра до мене на вечерю, буде скумбрія, картопелька...";
   buttonContainer.innerHTML = ""; // Убираем кнопки
 
   startCountdown(); // Запуск таймера
@@ -57,7 +57,7 @@ function showDisappointmentMessage() {
   const buttonContainer = document.querySelector(".next-button-container");
 
   // Отображаем сообщение о разочаровании
-  content.innerHTML = "Шкода, що не сподобалось. Буду працювати, щоб стати краще.";
+  content.innerHTML = "Шкода, що не сподобалось. Буду працювати, щоб стати краще.<br>Дозволь запросити тебе завтра до мене на вечерю, буде скумбрія, картопелька...";
   buttonContainer.innerHTML = ""; // Убираем кнопки
 
   startCountdown(); // Запуск таймера
@@ -83,7 +83,7 @@ function startCountdown() {
       timerElement.textContent = `Через: ${timeLeft--} секунд, повідомлення буде закрито, та відкрито new banner`; // Обновляем текст
     } else {
       clearInterval(countdown); // Останавливаем таймер
-      content.innerHTML = "Дякую за увагу, в майбутньому хочу реалізувати проєкт, в якому будуть додані всі проєкти клікабельно створені для тебе. Свого роду history for im and you.";
+      content.innerHTML = "Дякую за увагу, в майбутньому хочу реалізувати проєкт, в якому будуть додані всі проєкти клікабельно створені для тебе. Свого роду history for im and you.<br>Відповідь на питання надай в Telegram";
       buttonContainer.innerHTML = ""; // Убираем таймер
       buttonContainer.style.display = "none"; // Скрываем контейнер
     }

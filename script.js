@@ -31,16 +31,41 @@ function nextContent() {
     yesButton.className = "yes-button";
     yesButton.onclick = askAnotherQuestion;
     buttonContainer.appendChild(yesButton);
+
+    // Добавляем кнопку "Ні"
+    const noButton = document.createElement("button");
+    noButton.innerHTML = "Ні";
+    noButton.className = "no-button";
+    noButton.onclick = showDisappointmentMessage;
+    buttonContainer.appendChild(noButton);
   }
 }
 
 function askAnotherQuestion() {
   const content = document.getElementById("content");
   const buttonContainer = document.querySelector(".next-button-container");
-  
+
   // Обновляем контент с новым вопросом
   content.innerHTML = "Дякую, мені дуже приємно робити так, щоб ти посміхалась";
-  buttonContainer.innerHTML = ""; // Убираем кнопку "Так"
+  buttonContainer.innerHTML = ""; // Убираем кнопки
+
+  startCountdown(); // Запуск таймера
+}
+
+function showDisappointmentMessage() {
+  const content = document.getElementById("content");
+  const buttonContainer = document.querySelector(".next-button-container");
+
+  // Отображаем сообщение о разочаровании
+  content.innerHTML = "Шкода, що не сподобалось. Буду працювати, щоб стати краще.";
+  buttonContainer.innerHTML = ""; // Убираем кнопки
+
+  startCountdown(); // Запуск таймера
+}
+
+function startCountdown() {
+  const content = document.getElementById("content");
+  const buttonContainer = document.querySelector(".next-button-container");
 
   // Создаем элемент для таймера
   const timerElement = document.createElement("div");

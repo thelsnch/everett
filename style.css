@@ -120,6 +120,6 @@ body {
   
     .character {
       height: 80px; /* Уменьшенное изображение персонажа */
-      margin-left: -60px; /* Зсув вліво */
+      margin-left: -30px; /* Зсув вліво */
     }
   }

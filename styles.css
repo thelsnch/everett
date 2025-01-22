@@ -120,5 +120,8 @@ body {
 
   .character {
     height: 100px; /* Уменьшенное изображение персонажа */
+    width: auto;
+    z-index: 1;
+    margin-left: -35px;
   }
 }

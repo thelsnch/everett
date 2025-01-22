@@ -104,17 +104,17 @@ body {
 /* Адаптация для экранов до 480px (iPhone SE и другие маленькие экраны) */
 @media (max-width: 480px) {
   .card {
-    font-size: 16px; /* Уменьшаем текст для небольших экранов */
-    padding: 15px;
+    font-size: 11px; /* Уменьшаем текст для небольших экранов */
+    padding: 12px;
   }
 
   .info-block, .info-dev {
-    font-size: 14px;
+    font-size: 11px;
   }
 
   .next-button,
   .yes-button {
-    font-size: 14px;
+    font-size: 12px;
     padding: 8px 15px;
   }
 

@@ -39,7 +39,7 @@ function askAnotherQuestion() {
   const buttonContainer = document.querySelector(".next-button-container");
   
   // Обновляем контент с новым вопросом
-  content.innerHTML = "Дозволь тебе завтра запросити на вечерю до себе, та разом провести час! Буде: Скумбрія, Картопелька, та цікавий фільм :)";
+  content.innerHTML = "Дякую, мені дуже приємно робити так, щоб ти посміхалась";
   buttonContainer.innerHTML = ""; // Убираем кнопку "Так"
 
   // Создаем элемент для таймера
@@ -58,7 +58,7 @@ function askAnotherQuestion() {
       timerElement.textContent = `Через: ${timeLeft--} секунд, повідомлення буде закрито та вказано куди надати відповідь!`; // Обновляем текст
     } else {
       clearInterval(countdown); // Останавливаем таймер
-      content.innerHTML = "Дякую за увагу! Відповідь надай в Telegram";
+      content.innerHTML = "Дякую за увагу, в майбутньому хочу реалізувати проєкт, в якому будуть додані всі проєкти клікабельно створені для тебе. Свого роду history for im and you.";
       buttonContainer.innerHTML = ""; // Убираем таймер
       buttonContainer.style.display = "none"; // Скрываем контейнер
     }

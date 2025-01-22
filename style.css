@@ -86,11 +86,15 @@ body {
     width: 100%; /* Кнопка растягивается на всю ширину */
   }
   
-  .next-button:hover,
-  .yes-button:hover {
+  .next-button:hover {
     background-color: #ff3873;
   }
-  
+  .yes-button:hover {
+    background-color: #3700fffa;
+  }
+    .no-button:hover {
+    background-color: #3700fffa;
+  }
   .info-block {
     position: fixed;
     top: 5%;

@@ -1,124 +1,124 @@
 /* Основные стили */
 body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #0022ff, #0055ff);
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    overflow: hidden; /* Убираем прокрутку */
-  }
-  
-  .container {
-    text-align: center;
-    color: white;
-    position: relative;
-    width: 90%; /* Уменьшаем ширину для смартфонов */
-    max-width: 400px; /* Максимальная ширина для адаптации */
-  }
-  
-  .characters {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    margin-top: 20px;
-  }
-  
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #0022ff, #0055ff);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden; /* Убираем прокрутку */
+}
+
+.container {
+  text-align: center;
+  color: white;
+  position: relative;
+  width: 90%; /* Уменьшаем ширину для смартфонов */
+  max-width: 400px; /* Максимальная ширина для адаптации */
+}
+
+.characters {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: 20px;
+}
+
+.card {
+  background-color: #0044ff;
+  padding: 20px;
+  border-radius: 15px;
+  font-size: 18px;
+  color: white;
+  text-align: center;
+  box-shadow: 0 5px 15px rgb(255, 255, 255, 0.4);
+  position: relative;
+  line-height: 1.5; /* Для лучшей читаемости текста */
+}
+
+.character {
+  height: 130px; /* Уменьшенная высота для смартфонов */
+  max-width: 100%; /* Оставляем пропорции для изображений */
+}
+
+.next-button-container {
+  margin-top: 20px;
+}
+
+.next-button,
+.yes-button {
+  margin-top: 15px;
+  padding: 10px 20px; /* Уменьшаем размеры кнопок */
+  font-size: 16px;
+  background-color: #ff0062;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.5);
+  width: 100%; /* Кнопка растягивается на всю ширину */
+}
+
+.next-button:hover,
+.yes-button:hover {
+  background-color: #ff3873;
+}
+
+.info-block {
+  position: fixed;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%; /* На смартфонах блок занимает почти всю ширину */
+  max-width: 400px; /* Максимальная ширина блока */
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border: 1px solid #fff;
+  border-radius: 10px;
+  color: white;
+  font-size: 16px;
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.5);
+}
+
+.info-dev {
+  position: fixed;
+  bottom: 5%; /* Переносим снизу экрана */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%; /* Ширина адаптирована под экраны смартфонов */
+  max-width: 400px; /* Максимальная ширина */
+  padding: 10px;
+  background-color: rgba(68, 0, 255, 0.3);
+  border: 1px solid #8c00ff;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+  font-size: 14px;
+  box-shadow: 0 5px 15px rgb(0, 81, 255);
+}
+
+/* Адаптация для экранов до 480px (iPhone SE и другие маленькие экраны) */
+@media (max-width: 480px) {
   .card {
-    background-color: #0044ff;
-    padding: 20px;
-    border-radius: 15px;
-    font-size: 18px;
-    color: white;
-    text-align: center;
-    box-shadow: 0 5px 15px rgb(255, 255, 255, 0.4);
-    position: relative;
-    line-height: 1.5; /* Для лучшей читаемости текста */
+    font-size: 16px; /* Уменьшаем текст для небольших экранов */
+    padding: 15px;
   }
-  
-  .character {
-    height: 130px; /* Уменьшенная высота для смартфонов */
-    max-width: 100%; /* Оставляем пропорции для изображений */
+
+  .info-block, .info-dev {
+    font-size: 14px;
   }
-  
-  .next-button-container {
-    margin-top: 20px;
-  }
-  
+
   .next-button,
   .yes-button {
-    margin-top: 15px;
-    padding: 10px 20px; /* Уменьшаем размеры кнопок */
-    font-size: 16px;
-    background-color: #ff0062;
-    color: white;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.5);
-    width: 100%; /* Кнопка растягивается на всю ширину */
-  }
-  
-  .next-button:hover,
-  .yes-button:hover {
-    background-color: #ff3873;
-  }
-  
-  .info-block {
-    position: fixed;
-    top: 5%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 90%; /* На смартфонах блок занимает почти всю ширину */
-    max-width: 400px; /* Максимальная ширина блока */
-    padding: 15px;
-    background-color: rgba(255, 255, 255, 0.3);
-    border: 1px solid #fff;
-    border-radius: 10px;
-    color: white;
-    font-size: 16px;
-    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.5);
-  }
-  
-  .info-dev {
-    position: fixed;
-    bottom: 5%; /* Переносим снизу экрана */
-    left: 50%;
-    transform: translateX(-50%);
-    width: 90%; /* Ширина адаптирована под экраны смартфонов */
-    max-width: 400px; /* Максимальная ширина */
-    padding: 10px;
-    background-color: rgba(68, 0, 255, 0.3);
-    border: 1px solid #8c00ff;
-    border-radius: 10px;
-    text-align: center;
-    color: white;
     font-size: 14px;
-    box-shadow: 0 5px 15px rgb(0, 81, 255);
+    padding: 8px 15px;
   }
-  
-  /* Адаптация для экранов до 480px (iPhone SE и другие маленькие экраны) */
-  @media (max-width: 480px) {
-    .card {
-      font-size: 11px; /* Уменьшаем текст для небольших экранов */
-      padding: 12px;
-    }
-  
-    .info-block, .info-dev {
-      font-size: 11px;
-    }
-  
-    .next-button,
-    .yes-button {
-      font-size: 12px;
-      padding: 8px 15px;
-    }
-  
-    .character {
-      height: 100px; /* Уменьшенное изображение персонажа */
-    }
+
+  .character {
+    height: 100px; /* Уменьшенное изображение персонажа */
   }
+}
